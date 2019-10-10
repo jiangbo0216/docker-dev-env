@@ -39,7 +39,7 @@ ENV TZ=Asia/Shanghai
 
 RUN echo "${TZ}" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
-    && apt-get install -y tzdata
+    && apt-get install -y tzdata mysql-client
     
 RUN apt-get autoremove -fy \
     && apt-get clean \
